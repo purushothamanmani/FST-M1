@@ -1,0 +1,21 @@
+import pandas
+
+dataFrame = pandas.read_csv("Activit17.csv")
+
+print("All data value: ")
+print("################")
+print(dataFrame)
+print("###########################")
+print("User names: ")
+print("------------")
+print(dataFrame["Usernames"])
+print("###################")
+print("2nd Row user Name: " + dataFrame["Usernames"][1] + "\n 2nd Row password: " + dataFrame["Passwords"][1])
+print("#############################")
+print("Sorted the user name values: ")
+print("-----------------------------")
+print(dataFrame.sort_values("Usernames"))
+print("##################################")
+print("Sorted the password values: ")
+print("-----------------------------")
+print(dataFrame.sort_values("Passwords", ascending=False))
