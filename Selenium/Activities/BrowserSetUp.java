@@ -6,7 +6,7 @@ public class BrowserSetUp {
     static WebDriver driver;
     public static WebDriver browserInitialize() {
         WebDriverManager.firefoxdriver().setup();
-        WebDriver driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
         return driver;
     }
 }
