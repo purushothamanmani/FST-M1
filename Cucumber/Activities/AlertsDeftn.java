@@ -20,13 +20,8 @@ public class AlertsDeftn {
 
     @Given("^User is on the page$")
     public void openPage() {
-        //Create Instances
-        System.setProperty(
-                "webdriver.gecko.driver",
-                "C:\\Users\\IBMADMIN\\IdeaProjects\\geckodriver.exe");
-        FirefoxOptions options = new FirefoxOptions();
-        options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-        driver = new FirefoxDriver(options);
+        driver = new FirefoxDriver();
+        wait = new WebDriverWait(driver, 10);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         //Open browser
