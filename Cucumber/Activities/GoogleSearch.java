@@ -21,13 +21,8 @@ public class GoogleSearch {
 
         @Given("^User is on Google Home Page$")
         public void user_is_on_google_home_page() throws Throwable {
-            System.setProperty(
-                    "webdriver.gecko.driver",
-                    "C:\\Users\\IBMADMIN\\IdeaProjects\\geckodriver.exe");
-            FirefoxOptions options = new FirefoxOptions();
-            options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-            driver = new FirefoxDriver(options);
-            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+                driver = new FirefoxDriver();
+                wait = new WebDriverWait(driver, 10);
 
             //Open the browser
             driver.get("https://www.google.com");
